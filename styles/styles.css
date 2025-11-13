@@ -2,20 +2,98 @@
 
 /* Reset CSS */
 /* Universal selector (*) targets every element (regardless tag, class, ID) */
+*{
+    margin: 0;
+    padding: 0;
+    
+}
 
+html{
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr[full-end] ;/* Start to center to end fr is fractional units */
+    grid-template-rows: repeat(6, min-content);
+}
 /* TODO */
 
 /** Start of Desktop Section **/
 /** ************************ **/
 
 /* Set up the navbar for the desktop */
+nav{
+    display: flex;
+    /*border: 1px solid black;*/
+    grid-column: full-start / full-end; /* takes up from full start to full end, navbar uses 1 FR of the screen */
+    justify-content: space-between;
+    height: 4rem;
+
+}
 
 
 /* Set up logo styles */
+.logo{
+    /* 32 px to rem conversion */
+    height: 2rem;
+    margin-left: 1.5rem;
+    border: 1px solid black;
+
+}
+
+.logoname{
+    text-transform: uppercase;
+
+}
+
+.logoname-bold{
+    font-weight: bold;
+    color: #484848;
 
 
+
+}
+
+.logoname-light{
+    font-weight: lighter;
+    color: #aaa;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
 /* Set up navigation links' styles */
+nav ul li{
+    
+    padding-right: 1rem;
 
+
+
+}
+
+nav ul li:last-child{ /* make the space after the last sign-in to 24px */
+    padding-right: 1.5rem;
+}
+
+nav > a{
+    display: flex;
+    align-items: center;
+}
 
 /* Set up header area */
 
