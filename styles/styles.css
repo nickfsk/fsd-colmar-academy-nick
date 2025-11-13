@@ -96,12 +96,183 @@ nav > a{
 }
 
 /* Set up header area */
+header{
+    display: flex;
+    align-items: center;          /* center the header vertically */
+    justify-content: center;       /* horizontally center the header */
+    background-color: #d8d8d8;
+}
 
+.imagecontainer{
+    padding: 2rem 1.5rem 2rem 1.5rem; /* top right  bottom left */
+}
+
+header > img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+header > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 18rem;
+    padding: 0 1.5rem;
+}
+
+header > div >h1{
+    font-size: xx-large;
+}
+
+header > div > h2{
+    font-size: x-large; 
+}
+
+
+
+header > div > a {
+    background-color: #484848;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+
+header > div > a:hover{
+    color: rgb(255, 255, 255, 0.5);
+    background-color:  rgb(72,72,72, 0.5);
+}
 
 /* hover effect for call to action link */
 
 
 /* Set up practice section */
+.practice{
+    display: flex;
+    justify-content: flex-start; /* shift to left */
+    flex-direction: column;
+
+}
+
+.practice > .imagecontainer > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.practice > .practice-text{
+    padding: 0 1.5rem;
+}
+
+.practice > .practice-text > h1{
+    font-size: x-large;
+    margin: 2rem 0  1.5rem 0 ; /* Top right Bottom  left */
+}
+
+
+.practice > .practice-text > p{
+    font-size: small;
+    font-weight: lighter;
+}
+
+
+.practice > .practice-text > p > span{
+    display:block;
+    padding: 2rem 0;
+    
+}
+
+
+/* Setup events section */
+
+.events{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    border-left: 1px solid black;
+
+
+}
+
+
+.events .event-block{
+
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    align-items: center;
+}
+
+
+.events .event-block:last-child{
+    background-color: #d8d8d8;
+}
+.events > event-block > img{
+    max-width: 100%;
+    height: auto;
+    margin: 1rem; /* 1 rem = 16px */
+}
+
+.events > .event-block:first-child > img{
+    margin-top: 2rem;
+}
+
+
+.events > .event-block > div > h3{
+    font-size: medium;
+}
+
+.events > .event-block > .event-text{
+    margin: 2rem;
+}
+
+.events > .event-block > .event-text > p,
+.events > .event-block > .event-text > a{
+    font-size: small;
+}
+
+.events > .event-block > .event-text > a{
+    color: #3434c6;
+}
+.events > .event-block > .event-text > p{
+    margin: 0.5rem 0;
+}
+
+<!-- FOOTER -- >
+
+footer{
+    grid-column: full-start / full-end;
+ 
+    display: flex;
+    flex-direction:  row;
+    font-size: smaller;
+    border-top: 1px solid #e7e7e7;
+    justify-content: space-between;
+    padding: 1rem 0 2rem 0;
+    color: #8d8d8d;
+
+}
+
+footer > p{
+    margin-left: 1.5rem;
+}
+
+footer > ul{
+    display: flex;
+    list-style: none;
+}
+
+footer > ul > li{
+    margin-right: 1rem;
+}
+
+footer > ul > li:last-child{
+    margin-right: 1.5rem;
+}
+
+
 
 
 /* Hide events mobile */
