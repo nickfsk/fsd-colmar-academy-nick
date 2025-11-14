@@ -26,7 +26,7 @@ a {
 
 .container{
     display: grid;
-    grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr[full-end] ;/* Start to center to end fr is fractional units */
+    grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end] ;/* Start to center to end fr is fractional units */
     grid-template-rows: repeat(6, min-content);
 }
 /* TODO */
@@ -184,20 +184,14 @@ header > div > a:hover{
     
 }
 
-
-/* Setup events section */
-
+/* Set up events section */
 .events{
     display: grid;
     grid-template-rows: repeat(3, min-content);
-    border-left: 1px solid black;
-
-
+    border-left: 1px solid #e7e7e7;
 }
 
-
 .events .event-block{
-
     display: grid;
     grid-template-columns: 0.35fr 0.65fr;
     border-top: 1px solid #e7e7e7;
@@ -205,30 +199,29 @@ header > div > a:hover{
     align-items: center;
 }
 
-
 .events .event-block:last-child{
     background-color: #d8d8d8;
 }
-.events > event-block > img{
+
+.events > .event-block > img{
     max-width: 100%;
     height: auto;
-    margin: 1rem; /* 1 rem = 16px */
+    margin: 1rem;
 }
 
 .events > .event-block:first-child > img{
     margin-top: 2rem;
 }
 
-
-.events > .event-block > div > h3{
+.events > .event-block > .event-text > h3{
     font-size: medium;
 }
 
-.events > .event-block > .event-text{
-    margin: 2rem;
+.events > .event-block >.event-text{
+   margin: 2rem;
 }
 
-.events > .event-block > .event-text > p,
+.events > .event-block > .event-text > p, 
 .events > .event-block > .event-text > a{
     font-size: small;
 }
@@ -236,23 +229,22 @@ header > div > a:hover{
 .events > .event-block > .event-text > a{
     color: #3434c6;
 }
+
 .events > .event-block > .event-text > p{
     margin: 0.5rem 0;
 }
 
-<!-- FOOTER -- >
+/* Start of footer section */
 
 footer{
     grid-column: full-start / full-end;
- 
     display: flex;
-    flex-direction:  row;
+    flex-direction: row;
     font-size: smaller;
     border-top: 1px solid #e7e7e7;
     justify-content: space-between;
     padding: 1rem 0 2rem 0;
     color: #8d8d8d;
-
 }
 
 footer > p{
@@ -271,9 +263,6 @@ footer > ul > li{
 footer > ul > li:last-child{
     margin-right: 1.5rem;
 }
-
-
-
 
 /* Hide events mobile */
 
