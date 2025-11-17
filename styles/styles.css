@@ -15,7 +15,7 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fff;
-}
+}url(https://file%2B.vscode-resource.vscode-cdn.net/Users/nick/Desktop/Assessment1/colmar-academy-spec.png?version%3D1763104307519)
 
 a {
   text-decoration: none;
@@ -39,6 +39,7 @@ nav {
   grid-column: full-start / full-end; /* IMPORTANT: navbar uses 1fr of the screen */
   justify-content: space-between;
   height: 4rem;
+   
 }
 
 /* Set up logo styles */
@@ -79,6 +80,7 @@ nav ul li:last-child {
 nav > a {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 /* Set up header area */
@@ -123,6 +125,7 @@ header > div > a {
   padding: 0.5rem 0; /* tb=8px lr=0 */
   text-align: center;
   color: #fff;
+  text-decoration: none;
 }
 
 /* hover effect for call to action link */
@@ -202,6 +205,7 @@ header > div > a:hover {
 .events > .event-block > .event-text > p,
 .events > .event-block > .event-text > a {
   font-size: small;
+   text-decoration: none;
 }
 
 .events > .event-block > .event-text > a {
@@ -252,7 +256,157 @@ footer > ul > li:last-child {
 /** ********************** **/
 /** End of Desktop Section **/
 
-/* TODO */
+
+
+/* Desktop Learning section */
+
+
+.learning {
+    background-color: #d8d8d8;;
+    height: auto;
+    grid-column: full-start / full-end; 
+    padding: 2rem 8rem 2rem 2rem;
+  
+}
+
+.learning-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0rem 4rem 0rem;
+    font-size: x-large;
+    font-weight: 800;
+    <!--color: #4A4A4A;-->
+}
+
+.learning-container {
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+    margin: 0rem 4.5rem;
+}
+
+
+.card a {
+    text-decoration: none;
+    color: #797676;
+}
+.card h4 {
+    margin: 1rem;
+    font-size: x-large;
+}
+.card-content{
+    margin: 1rem 1rem;
+    width: 60%;
+}
+
+.scope {
+    padding: .5rem 0;
+
+}
+
+.card img {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.card {
+    background-color: #FFF;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/** Thesis Desktop Mode **/
+
+.thesis {
+    grid-column:full-start / full-end; 
+    padding: 2rem 1.5rem;
+    /* border: 2px solid red; */
+}
+
+.thesis-container {
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+}
+
+.thesis-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: xx-large;
+    <!-- font-weight: 800; -->
+    color: #4A4A4A;
+}
+
+.thesis-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 1.5rem;
+}
+
+.thesis-left video {
+    width: 100%;
+}
+
+.thesis-left-content h3 {
+    color: #4A4A4A;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.thesis-left-content p {
+    color: #767676;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.thesis-right {
+    display: grid;
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-column: 0.4fr 0.6fr;
+}
+
+.thesis-card img {
+    width: 35%;
+    height: auto;
+}
+
+.thesis-card  {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.thesis-card:first-child {
+    background-color: #d8d8d8;
+}
+
+.thesis-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.thesis-card-content h3 {
+    color: #4A4A4A;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.thesis-card-content p {
+    color: #767676;
+    margin-bottom: 2rem;
+}
+
+/** End Thesis desktop mode **/
 
 /** Start of Mobile Section **/
 /** *********************** **/
@@ -261,7 +415,27 @@ footer > ul > li:last-child {
 @media screen and (max-width: 40rem) {
   nav, .practice {
     display: none;
+
+    
   }
+
+  /** Test **/
+     
+    
+    
+    .learning-mobile {
+        display: block; /* hide mobile version */
+    }
+  
+ 
+
+  .learning-mobile{
+      display: none;
+    }
+
+    .learning{
+      display: block;
+    }
 
   #nav-mobile{
     display: flex;
@@ -278,6 +452,8 @@ footer > ul > li:last-child {
 
   .imagecontainer{
     padding: 0;
+    display: flex;
+    justify-content: center;
   }
 
   header > div{
@@ -369,7 +545,119 @@ footer > ul > li:last-child {
     border-bottom: 1px solid #e7e7e7;
   }
 
+
+   .learning { /* hides learning desktop version */
+        display: none;
+    }
+
+    .learning-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-learning {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .mobile-learning a {
+        text-decoration: none;
+    }
+
+    .mobile-learning li:hover {
+        transform: scale(1.03);
+        background-color: #adadad;
+    }
+
+    .mobile-learning li {
+        text-decoration: none;
+        list-style: none;
+        font-size: large;
+        font-weight: 600;
+        background-color: #D8D8D8;
+        margin: 1rem 1rem 0.5rem 1rem;
+        font-size: 1.2rem;
+        padding: 1.5rem 0 1.5rem 1rem;
+        color: #4b4b4b;
+    }
+
+    .li-last-child {
+        margin-bottom: 10rem;
+    }
+
+    .learning-heading-mobile {
+        font-size: xx-large;
+        margin-top: 2rem;
+        color: #4f4f4f;
+    }
+
+    /** Start Thesis mobile **/
+
+     .thesis-left-content {
+        display: none;
+    }
+
+    .thesis-right {
+        display: none;
+    }
+    
+    .thesis {
+        border-top: 1px solid #e9eaea;
+        padding: 0 0;
+    }
+
+    .thesis-heading {
+        margin: 2rem;
+    }
+
+    .thesis-left {
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+        grid-column: full--start / full--end;
+        height: auto;
+    }
+
+    /** End thesis mobile **/
+
 }
 
-/* *********************** */
-/** End of Mobile Section **/
+/** Attempts to reset to Desktop dimensions post  resize to mobile **/
+/** Nick found he could not reset and trying this piece of code to reset after resize from Desktop to mobile to desktop **/
+ @media screen and (min-width: 40.063rem) {
+    .practice {
+        display: block; /* reset to desktop style */
+    }
+    
+    .events {
+        display: grid; /* reset to desktop style */
+    }
+    
+    .events-mobile {
+        display: none; /* hide mobile version */
+    }
+    
+    .learning {
+        display: block; /* show desktop version */
+    }
+    
+    .learning-mobile {
+        display: none; /* hide mobile version */
+    }
+    
+    .mobile-nav {
+        display: none; /* ensure mobile nav is hidden */
+    }
+    
+    .desktop-nav {
+        display: flex; /* ensure desktop nav is shown */
+    }
+}
+ 
+
+
+
